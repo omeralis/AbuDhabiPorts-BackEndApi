@@ -1,0 +1,52 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7192"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/employees",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44392
+        }
+      ],
+      "DownstreamPathTemplate": "/api/employees",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/employees/{employeeId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44392
+        }
+      ],
+      "DownstreamPathTemplate": "/api/employees/{employeeId}",
+      "UpstreamHttpMethod": [ "Put", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/users/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44392
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/login",
+      "UpstreamHttpMethod": [ "Post" ]
+     
+    }
+  ]
+}
