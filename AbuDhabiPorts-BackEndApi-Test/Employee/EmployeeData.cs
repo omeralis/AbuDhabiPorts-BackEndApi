@@ -4,24 +4,17 @@ using AbuDhabiPorts_BackEndApi.Models;
 namespace WebApi.Test.Employees;
 public static class EmployeeData
 {
-    //public static CreateEmployeeCommand MockCreateEmployeeCommand() => new()
-    //{
-    //    FirstName = "Mohamed",
-    //    LastName = "Eltaher",
-    //    Email = "dev.eltaher@gmail",
-    //    Phone = "0585199391"
-    //};
     public static List<Employee> MockEmployeeSamples() => new()
     {
         new Employee()
         {
-            FullName = "Mohamed",
-            Address = "Eltaher",
+            FullName = "omer",
+            Address = "dubai",
         },
         new Employee()
         {
-           FullName = "Mohamed",
-            Address = "Eltaher",
+           FullName = "omer",
+            Address = "dubai",
         }
     };
 
